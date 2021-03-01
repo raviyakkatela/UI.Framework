@@ -1,10 +1,9 @@
-package com.igc.hooks;
+package AppHooks;
 
 import java.util.Properties;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
 
 import com.igc.factory.DriverFactory;
 import com.igc.utils.ConfigReader;
@@ -13,10 +12,9 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 
-public class ApplicationHooks {
+public class ApplicationHooks extends DriverFactory {
 
 	private DriverFactory driverFactory;
-	private WebDriver driver;
 	private ConfigReader configReader;
 	Properties prop;
 
@@ -31,15 +29,14 @@ public class ApplicationHooks {
 		String browserName = prop.getProperty("BrowserName");
 		driverFactory = new DriverFactory();
 		driver = driverFactory.initializeDriver(browserName);
-		
+
 	}
-	
+
 	@Before(order = 2)
 	public void LaunchApplicationURL() {
 		String url = prop.getProperty("URL");
 		driver.get(url);
 
-		
 	}
 
 	@After(order = 0)

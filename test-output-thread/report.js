@@ -1,15 +1,15 @@
 $(document).ready(function() {
 CucumberHTML.timelineItems.pushArray([
   {
-    "id": "eac0b507-f79e-4709-aeb4-020024740431",
-    "feature": "loin",
+    "id": "c7d9bda6-3317-484a-a670-7ab3ed1da525",
+    "feature": "Booking an order",
     "scenario": "Verify user is able to select the lowest price item and able to checkout and complete the transaction process",
-    "start": 1614607415506,
+    "start": 1614620580820,
     "group": 1,
     "content": "",
-    "tags": "@login,",
-    "end": 1614607430756,
-    "className": "undefined"
+    "tags": "@tc-1,",
+    "end": 1614620673768,
+    "className": "passed"
   }
 ]);
 CucumberHTML.timelineGroups.pushArray([
